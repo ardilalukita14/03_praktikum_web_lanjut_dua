@@ -21,8 +21,10 @@ class HomeController extends Controller
 
     public function menucafe()
     {
-        return view('menucafe');
+        $menu = Menu::all();
+        return view('menucafe', ['dataMenu' => $menu]);
     }
+
 
     public function varianmenu()
     {
